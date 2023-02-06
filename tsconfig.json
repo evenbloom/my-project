@@ -19,6 +19,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/slice-simulator.jsx", "pages/_app.js", "pages/index.js", "components/Container.js"],
   "exclude": ["node_modules"]
 }

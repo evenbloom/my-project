@@ -1,0 +1,31 @@
+{
+  "_cts": {
+    "homepage": {},
+    "page": {}
+  },
+  "slices": {
+    "HeroSlice": {
+      "default": {
+        "items": {}
+      }
+    },
+    "Projects": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "OtherPages": {},
+    "Animation": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "WhatIOffer": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    }
+  }
+}

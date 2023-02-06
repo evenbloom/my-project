@@ -1,0 +1,63 @@
+{
+  "id": "what_i_offer",
+  "type": "SharedSlice",
+  "name": "WhatIOffer",
+  "description": "WhatIOffer",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "WhatIOffer",
+      "primary": {
+        "title_section": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title section",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "section_description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Section Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        }
+      },
+      "items": {
+        "numbers": {
+          "type": "Text",
+          "config": {
+            "label": "Numbers",
+            "placeholder": ""
+          }
+        },
+        "title_points": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title Points",
+            "placeholder": "Key Points ",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "key_description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Desciption",
+            "placeholder": "description of key points",
+            "allowTargetBlank": true,
+            "single": "preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}
