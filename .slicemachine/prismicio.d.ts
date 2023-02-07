@@ -327,13 +327,13 @@ interface WhatIOfferSliceDefaultPrimary {
     /**
      * Title section field in *WhatIOffer → Primary*
      *
-     * - **Field Type**: Rich Text
+     * - **Field Type**: Title
      * - **Placeholder**: *None*
      * - **API ID Path**: what_i_offer.primary.title_section
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    title_section: prismicT.RichTextField;
+    title_section: prismicT.TitleField;
     /**
      * Section Description field in *WhatIOffer → Primary*
      *
@@ -363,13 +363,13 @@ export interface WhatIOfferSliceDefaultItem {
     /**
      * Title Points field in *WhatIOffer → Items*
      *
-     * - **Field Type**: Rich Text
+     * - **Field Type**: Title
      * - **Placeholder**: Key Points
      * - **API ID Path**: what_i_offer.items[].title_points
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    title_points: prismicT.RichTextField;
+    title_points: prismicT.TitleField;
     /**
      * Desciption field in *WhatIOffer → Items*
      *

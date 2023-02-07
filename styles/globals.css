@@ -17,4 +17,8 @@
   .mask-rise-radial-gradient {
     mask-image: radial-gradient(circle at center center, black, transparent 80%)
   }
+
+  .mask-linear-gradient{
+    mask-image: linear-gradient(black, transparent)
+  }
 }

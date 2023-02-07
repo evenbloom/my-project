@@ -17,7 +17,7 @@
             "label": "Title section",
             "placeholder": "",
             "allowTargetBlank": true,
-            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+            "single": "heading2"
           }
         },
         "section_description": {
@@ -26,7 +26,7 @@
             "label": "Section Description",
             "placeholder": "",
             "allowTargetBlank": true,
-            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+            "single": "paragraph"
           }
         }
       },
@@ -44,7 +44,7 @@
             "label": "Title Points",
             "placeholder": "Key Points ",
             "allowTargetBlank": true,
-            "single": "paragraph,preformatted,heading1,heading2,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+            "single": "heading3"
           }
         },
         "key_description": {
@@ -53,7 +53,7 @@
             "label": "Desciption",
             "placeholder": "description of key points",
             "allowTargetBlank": true,
-            "single": "preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+            "single": "paragraph"
           }
         }
       },

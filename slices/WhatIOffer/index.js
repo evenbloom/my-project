@@ -13,38 +13,30 @@ import classNames from 'classnames'
 const WhatIOffer = ({ slice }) => (
   <section className='section h-[100vh]'>
     <Container>
-      <div className='relative text-center justify-center'>
+      <div className='text-center justify-center'>
         <RichText field={slice.primary.title_section} className="text-6xl font-bold uppercase text-lightteal mb-4 "/>
         <RichText className="text-lg mt-2 text-mediumteal max-w-[560px] m-auto" field={slice.primary.section_description}/>
       </div>
 
-      <div>
+      <div className='items-center'>
        <img
           src='/design.svg'
-          className="mask-rise-radial-gradient mt-14 overflow-hidden"
+          className="mask-linear-gradient mt-14 overflow-hidden mx-auto"
         />
       </div>
-      <div className='mt-10'>
-        <div className='grid grid-cols-3 '>
-            {
-              slice?.items?.map((item, i) =>
-                <span className='text-lightteal'>{ item.numbers }</span>
-              )
-            }
-
-            {
-              slice?.items?.map((item, i) =>
-                <RichText field={item.title_points} className="text-lg mt-1 text-lightteal" />
-              )
-            }
-
-            {
-              slice?.items?.map((item, i) =>
-                <RichText field={item.key_description} className="text-xs" />
-              )
-              }
-          </div>
-      </div>
+      
+      <div className='mt-10 grid grid-cols-1 sm:grid-cols-3 gap-x-8 items-start place-items-center'>
+            {slice?.items?.map((item, i) => (
+              <div className=''>
+                <span className='text-lightteal'>{item.numbers}</span>
+                <RichText field={item.title_points} className="text-lg  text-lightteal max-w-xs" />
+                
+                <RichText field={item.key_description} className="text-sm max-w-[27rem] mt-3" />
+                
+              </div>
+            ))}
+        </div>
+        
     </Container>
   </section>
 )
