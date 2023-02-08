@@ -28,6 +28,9 @@
             },
             "what_i_offer": {
               "type": "SharedSlice"
+            },
+            "resources": {
+              "type": "SharedSlice"
             }
           }
         }

@@ -26,6 +26,12 @@
         "primary": {},
         "items": {}
       }
+    },
+    "Resources": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
     }
   }
 }

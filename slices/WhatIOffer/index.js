@@ -11,7 +11,7 @@ import classNames from 'classnames'
  * @param { WhatIOfferProps }
  */
 const WhatIOffer = ({ slice }) => (
-  <section className='section h-[100vh]'>
+  <section className='w-full py-[20rem]'>
     <Container>
       <div className='text-center justify-center'>
         <RichText field={slice.primary.title_section} className="text-6xl font-bold uppercase text-lightteal mb-4 "/>
@@ -27,7 +27,7 @@ const WhatIOffer = ({ slice }) => (
       
       <div className='mt-10 grid grid-cols-1 sm:grid-cols-3 gap-x-8 items-start place-items-center'>
             {slice?.items?.map((item, i) => (
-              <div className=''>
+              <div key={i}>
                 <span className='text-lightteal'>{item.numbers}</span>
                 <RichText field={item.title_points} className="text-lg  text-lightteal max-w-xs" />
                 

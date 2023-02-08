@@ -35,7 +35,7 @@ interface HomepageDocumentData {
  * Slice for *Homepage → Slice Zone*
  *
  */
-type HomepageDocumentDataSlicesSlice = HeroSliceSlice | ProjectsSlice | AnimationSlice | WhatIOfferSlice;
+type HomepageDocumentDataSlicesSlice = HeroSliceSlice | ProjectsSlice | AnimationSlice | WhatIOfferSlice | ResourcesSlice;
 /**
  * Homepage document from Prismic
  *
@@ -320,6 +320,91 @@ type ProjectsSliceVariation = ProjectsSliceDefault;
  */
 export type ProjectsSlice = prismicT.SharedSlice<"projects", ProjectsSliceVariation>;
 /**
+ * Primary content in Resources → Primary
+ *
+ */
+interface ResourcesSliceDefaultPrimary {
+    /**
+     * Title Section field in *Resources → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: *None*
+     * - **API ID Path**: resources.primary.title_section
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title_section: prismicT.TitleField;
+    /**
+     * Sub Header  field in *Resources → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: resources.primary.sub_header
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    sub_header: prismicT.RichTextField;
+}
+/**
+ * Item in Resources → Items
+ *
+ */
+export interface ResourcesSliceDefaultItem {
+    /**
+     * Resource Images field in *Resources → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: resources.items[].resource_images
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    resource_images: prismicT.ImageField<never>;
+    /**
+     * Resource Header field in *Resources → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: resources.items[].resource_header
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    resource_header: prismicT.RichTextField;
+    /**
+     * CTA Link field in *Resources → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: resources.items[].cta_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    cta_link: prismicT.LinkField;
+}
+/**
+ * Default variation for Resources Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Resources`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ResourcesSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<ResourcesSliceDefaultPrimary>, Simplify<ResourcesSliceDefaultItem>>;
+/**
+ * Slice variation for *Resources*
+ *
+ */
+type ResourcesSliceVariation = ResourcesSliceDefault;
+/**
+ * Resources Shared Slice
+ *
+ * - **API ID**: `resources`
+ * - **Description**: `Resources`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ResourcesSlice = prismicT.SharedSlice<"resources", ResourcesSliceVariation>;
+/**
  * Primary content in WhatIOffer → Primary
  *
  */
@@ -409,6 +494,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, AnimationSliceDefaultPrimary, AnimationSliceDefault, AnimationSliceVariation, AnimationSlice, HeroSliceSliceDefaultPrimary, HeroSliceSliceDefaultItem, HeroSliceSliceDefault, HeroSliceSliceVariation, HeroSliceSlice, OtherPagesSliceDefaultPrimary, OtherPagesSliceDefault, OtherPagesSliceVariation, OtherPagesSlice, ProjectsSliceDefaultItem, ProjectsSliceDefault, ProjectsSliceVariation, ProjectsSlice, WhatIOfferSliceDefaultPrimary, WhatIOfferSliceDefaultItem, WhatIOfferSliceDefault, WhatIOfferSliceVariation, WhatIOfferSlice };
+        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, AnimationSliceDefaultPrimary, AnimationSliceDefault, AnimationSliceVariation, AnimationSlice, HeroSliceSliceDefaultPrimary, HeroSliceSliceDefaultItem, HeroSliceSliceDefault, HeroSliceSliceVariation, HeroSliceSlice, OtherPagesSliceDefaultPrimary, OtherPagesSliceDefault, OtherPagesSliceVariation, OtherPagesSlice, ProjectsSliceDefaultItem, ProjectsSliceDefault, ProjectsSliceVariation, ProjectsSlice, ResourcesSliceDefaultPrimary, ResourcesSliceDefaultItem, ResourcesSliceDefault, ResourcesSliceVariation, ResourcesSlice, WhatIOfferSliceDefaultPrimary, WhatIOfferSliceDefaultItem, WhatIOfferSliceDefault, WhatIOfferSliceVariation, WhatIOfferSlice };
     }
 }

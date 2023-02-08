@@ -66,7 +66,8 @@ content: [
       "Teal-gradient": "linear-gradient(180deg, #1A5A59 0%, #63A7A4 100%)",
       "hero-gradient": "linear-gradient(180deg, #63A7A4 0%, #051717 100%)",
       "box-gradient": "linear-gradient(180deg, #2B6C6A 0%, #E8F8F8 100%)",
-      "rise-radial-gradient":"radial-gradient(70.96% 70.96% at 50% 70.96%, rgba(126, 209, 252, 0.4) 0%, rgba(170, 252, 253, 0) 100%)",
+      "rise-radial-gradient": "radial-gradient(70.96% 70.96% at 50% 70.96%, rgba(126, 209, 252, 0.4) 0%, rgba(170, 252, 253, 0) 100%)",
+      "overlay-gradient":"linear-gradient(180deg, rgba(99, 167, 164, 0) 0%, #63A7A4 72.8%)",
     },
     keyframes: {
       "fade-in": {

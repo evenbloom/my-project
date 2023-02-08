@@ -4,6 +4,7 @@ import Animation from './Animation';
 import HeroSlice from './HeroSlice';
 import OtherPages from './OtherPages';
 import Projects from './Projects';
+import Resources from './Resources';
 import WhatIOffer from './WhatIOffer';
 
 export {
@@ -11,6 +12,7 @@ export {
 	HeroSlice,
 	OtherPages,
 	Projects,
+	Resources,
 	WhatIOffer,
 };
 
@@ -19,5 +21,6 @@ export const components = {
 	hero_slice: HeroSlice,
 	other_pages: OtherPages,
 	projects: Projects,
+	resources: Resources,
 	what_i_offer: WhatIOffer,
 };
