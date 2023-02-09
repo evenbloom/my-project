@@ -21,9 +21,9 @@ const HeroSlice = ({ slice }) => (
     </div>
       <Container className='pt-[var(--navigation-height)]'>
         <div className='relative text-center pt-[300px]'>
-          <div className='absolute text-center h-full'>
-            <RichText field={slice.primary.title} className='text-6xl md:text-8xl font-bold text-teal-700 font-map animate-fade-in [--animation-delay:200ms] opacity-0 translate-y-[-1rem] uppercase' />
-            <RichText field={slice.primary.description} className='text-lg text-teal-700 mt-2 animate-fade-in [--animation-delay:400ms] opacity-0 translate-y-[-1rem]'/>
+          <div className='absolute text-center h-full mx-auto justify-center items-center flex flex-col'>
+            <RichText field={slice.primary.title} className='text-6xl md:text-8xl font-bold md:text-teal animate-fade-in [--animation-delay:200ms] opacity-0 translate-y-[-1rem] uppercase text-lightteal bg-blend-overlay w-100%' />
+            <RichText field={slice.primary.description} className='text-lg md:text-teal text-lightteal md:mt-2 mt-5 animate-fade-in [--animation-delay:400ms] opacity-0 translate-y-[-1rem]'/>
           
             <div>
               {

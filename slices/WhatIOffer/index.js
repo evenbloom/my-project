@@ -25,7 +25,7 @@ const WhatIOffer = ({ slice }) => (
         />
       </div>
       
-      <div className='mt-10 grid grid-cols-1 sm:grid-cols-3 gap-x-8 items-start place-items-center'>
+      <div className='mt-14 grid grid-cols-1 sm:grid-cols-3 gap-x-8 items-start place-items-center'>
             {slice?.items?.map((item, i) => (
               <div key={i}>
                 <span className='text-lightteal'>{item.numbers}</span>

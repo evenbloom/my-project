@@ -1,0 +1,56 @@
+{
+  "name": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Tempor velit ex aliqua elit."
+        }
+      }
+    ]
+  },
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "point"
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "navigation_item$b0a3c8a6-6344-466b-8860-630bbae9c596",
+        "name": "navigation_item",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "name": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Eu pariatur cupidatat proident id aliquip ipsum labore enim irure. Lorem consectetur cillum excepteur irure qui minim nulla consectetur irure. Adipisicing ad excepteur cillum amet fugiat tempor."
+                  }
+                }
+              ]
+            },
+            "link": {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "https://slicemachine.dev"
+              }
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

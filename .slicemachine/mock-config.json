@@ -1,7 +1,8 @@
 {
   "_cts": {
     "homepage": {},
-    "page": {}
+    "page": {},
+    "navigation": {}
   },
   "slices": {
     "HeroSlice": {
@@ -31,6 +32,11 @@
       "default": {
         "primary": {},
         "items": {}
+      }
+    },
+    "NavigationItem": {
+      "default": {
+        "primary": {}
       }
     }
   }

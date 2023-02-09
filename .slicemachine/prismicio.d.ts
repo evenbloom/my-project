@@ -46,6 +46,46 @@ type HomepageDocumentDataSlicesSlice = HeroSliceSlice | ProjectsSlice | Animatio
  * @typeParam Lang - Language API ID of the document.
  */
 export type HomepageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<HomepageDocumentData>, "homepage", Lang>;
+/** Content for Navigation documents */
+interface NavigationDocumentData {
+    /**
+     * Name field in *Navigation*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: Name of the navigation list
+     * - **API ID Path**: navigation.name
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    name: prismicT.RichTextField;
+    /**
+     * Slice Zone field in *Navigation*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<NavigationDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Navigation → Slice Zone*
+ *
+ */
+type NavigationDocumentDataSlicesSlice = NavigationItemSlice;
+/**
+ * Navigation document from Prismic
+ *
+ * - **API ID**: `navigation`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type NavigationDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<NavigationDocumentData>, "navigation", Lang>;
 /** Content for Page documents */
 interface PageDocumentData {
     /**
@@ -86,7 +126,7 @@ type PageDocumentDataSlicesSlice = OtherPagesSlice;
  * @typeParam Lang - Language API ID of the document.
  */
 export type PageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
-export type AllDocumentTypes = HomepageDocument | PageDocument;
+export type AllDocumentTypes = HomepageDocument | NavigationDocument | PageDocument;
 /**
  * Primary content in Animation → Primary
  *
@@ -221,6 +261,55 @@ type HeroSliceSliceVariation = HeroSliceSliceDefault;
  *
  */
 export type HeroSliceSlice = prismicT.SharedSlice<"hero_slice", HeroSliceSliceVariation>;
+/**
+ * Primary content in NavigationItem → Primary
+ *
+ */
+interface NavigationItemSliceDefaultPrimary {
+    /**
+     * Name field in *NavigationItem → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: Name of the link
+     * - **API ID Path**: navigation_item.primary.name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    name: prismicT.RichTextField;
+    /**
+     * Link field in *NavigationItem → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: Link for the item
+     * - **API ID Path**: navigation_item.primary.link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link: prismicT.LinkField;
+}
+/**
+ * Default variation for NavigationItem Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `NavigationItem`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type NavigationItemSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<NavigationItemSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *NavigationItem*
+ *
+ */
+type NavigationItemSliceVariation = NavigationItemSliceDefault;
+/**
+ * NavigationItem Shared Slice
+ *
+ * - **API ID**: `navigation_item`
+ * - **Description**: `NavigationItem`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type NavigationItemSlice = prismicT.SharedSlice<"navigation_item", NavigationItemSliceVariation>;
 /**
  * Primary content in OtherPages → Primary
  *
@@ -494,6 +583,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, AnimationSliceDefaultPrimary, AnimationSliceDefault, AnimationSliceVariation, AnimationSlice, HeroSliceSliceDefaultPrimary, HeroSliceSliceDefaultItem, HeroSliceSliceDefault, HeroSliceSliceVariation, HeroSliceSlice, OtherPagesSliceDefaultPrimary, OtherPagesSliceDefault, OtherPagesSliceVariation, OtherPagesSlice, ProjectsSliceDefaultItem, ProjectsSliceDefault, ProjectsSliceVariation, ProjectsSlice, ResourcesSliceDefaultPrimary, ResourcesSliceDefaultItem, ResourcesSliceDefault, ResourcesSliceVariation, ResourcesSlice, WhatIOfferSliceDefaultPrimary, WhatIOfferSliceDefaultItem, WhatIOfferSliceDefault, WhatIOfferSliceVariation, WhatIOfferSlice };
+        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, AnimationSliceDefaultPrimary, AnimationSliceDefault, AnimationSliceVariation, AnimationSlice, HeroSliceSliceDefaultPrimary, HeroSliceSliceDefaultItem, HeroSliceSliceDefault, HeroSliceSliceVariation, HeroSliceSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, OtherPagesSliceDefaultPrimary, OtherPagesSliceDefault, OtherPagesSliceVariation, OtherPagesSlice, ProjectsSliceDefaultItem, ProjectsSliceDefault, ProjectsSliceVariation, ProjectsSlice, ResourcesSliceDefaultPrimary, ResourcesSliceDefaultItem, ResourcesSliceDefault, ResourcesSliceVariation, ResourcesSlice, WhatIOfferSliceDefaultPrimary, WhatIOfferSliceDefaultItem, WhatIOfferSliceDefault, WhatIOfferSliceVariation, WhatIOfferSlice };
     }
 }
