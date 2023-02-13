@@ -19,13 +19,13 @@ const Resources = ({ slice }) => (
         <RichText field={slice.primary.sub_header}  className="text-lg mt-2 text-mediumteal max-w-[560px] m-auto" />
       </div>
 
-      <div className='grid grid-cols-3 mt-14 gap-x-10'>
+      <div className='grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-10 mt-14 gap-x-10'>
         {
           slice?.items?.map((item, i) => (
             <div field={item.cta_link} key={i} className={classNames('relative h-[400px] flex overflow-hidden flex-col rounded-2xl bg-mediumteal transform transition duration-500 hover:translate-y-[-1rem] cursor-pointer')}>
               <div field={item.cta_link} className='h-full'>
                 <img src={item.resource_images.url} alt={item.resource_images.alt} className='w-full h-full object-cover absolute' />
-                <div className='p-5 w-100% relative bg-overlay-gradient h-full flex flex-col justify-end'>
+                <div className='px-8 py-10 w-100% relative bg-overlay-gradient h-full flex flex-col justify-end'>
                   <RichText field={item.resource_header} className='text-md text-lightteal align-text-bottom font-semibold' />
                   <PrismicLink field={item.cta_link} className='mt-2 text-md text-lightteal flex items-baseline gap-2 transform duration-500 hover:gap-3'>
                     Get it now

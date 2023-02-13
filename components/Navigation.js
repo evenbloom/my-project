@@ -26,7 +26,9 @@ export function Navigation({ navigation }) {
   }, [setHamburgerMenuIsOpen]);
   
   return (
-    <header className='fixed z-10 left-0 right-0 top-0 w-full backdrop-blur-[12px]'>
+    <header className='fixed z-10 left-0 right-0 md:top-2 top-0 h-[8rem] w-100%'>
+      <Container>
+        <div className='items-center backdrop-blur-[15px] bg-mediumteal rounded-[10rem] flex h-100% px-5 w-100% bg-opacity-10'>
           {/* Renders top-level links. */}
           {navigation.data.slices.map((slice) => {
             return (
@@ -39,13 +41,13 @@ export function Navigation({ navigation }) {
                 </Link> 
                 <nav
                   className={classNames(
-                  'h-[100vh] transition-opacity duration-500 fixed -z-10 top-0  left-0 w-full pr-6 text-background bg-teal overflow-auto md:overflow-hidden md:block md:relative md:top-0 md:h-auto md:w-auto md:translate-x-0 md:bg-transparent md:opacity-100 md:transition-none md:text-teal',
+                  'h-[100vh] transition-opacity duration-500 fixed -z-10 md:-z-0 top-0 left-0 w-full pr-6 text-background bg-teal overflow-auto md:overflow-hidden md:block md:relative md:top-0 md:h-auto md:w-auto md:translate-x-0 md:bg-transparent md:opacity-100 md:transition-none md:text-teal',
                   hamburgerMenuIsOpen
                 ? "translate-x-0 opacity-100"
                 : "translate-x-[-100vw] opacity-0"
             )}
                 >
-                  <ul className='flex flex-col md:flex-row md:items-center text-md h-full [&_li]:ml-6 [&_li]:text-8xl [&_li]:px-[1rem] [&_li]:h-[25vh] [&_li]:flex [&_li]:items-center [&_li]:font-map md:[&_li]:font-sans md:[&_li]:text-md [&_a]:md:transition-colors [&_a:hover]:text-grey",
+                  <ul className='flex flex-col md:flex-row md:items-center md:ml-auto text-md h-full [&_li]:ml-6 [&_li]:text-8xl [&_li]:px-[1rem] [&_li]:h-[25vh] [&_li]:flex [&_li]:items-center [&_li]:font-map md:[&_li]:font-sans md:[&_li]:text-md [&_a]:md:transition-colors [&_a:hover]:text-grey",
                 hamburgerMenuIsOpen && "[&_a]:translate-y-0' > 
                     <li key={slice.id}>
                       <PrismicLink field={slice.primary.link}>
@@ -64,7 +66,8 @@ export function Navigation({ navigation }) {
                 </Container>
             )
           })}
-          
+          </div>
+      </Container>
       </header>
   )
 }

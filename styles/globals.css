@@ -14,6 +14,28 @@
 
 }
 
+@layer components{
+  #cont{
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+  }
+  .photobanner{
+    position:absolute; 
+    top:0rem; 
+    left:0px; 
+    overflow:hidden; 
+    white-space: nowrap;
+    animation: bannermove 20s linear infinite;
+  }
+
+  .photobanner img{
+    max-width: 640px;
+    margin: 0 0.5em;
+  }
+  
+}
+
 @layer utilities{
   .mask-rise-radial-gradient {
     mask-image: radial-gradient(circle at center center, black, transparent 80%)

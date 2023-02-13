@@ -177,6 +177,55 @@ type AnimationSliceVariation = AnimationSliceDefault;
  */
 export type AnimationSlice = prismicT.SharedSlice<"animation", AnimationSliceVariation>;
 /**
+ * Primary content in Footer → Primary
+ *
+ */
+interface FooterSliceDefaultPrimary {
+    /**
+     * Title field in *Footer → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: footer.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Description field in *Footer → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A nice description of your feature
+     * - **API ID Path**: footer.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+}
+/**
+ * Default variation for Footer Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Footer`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type FooterSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<FooterSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *Footer*
+ *
+ */
+type FooterSliceVariation = FooterSliceDefault;
+/**
+ * Footer Shared Slice
+ *
+ * - **API ID**: `footer`
+ * - **Description**: `Footer`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type FooterSlice = prismicT.SharedSlice<"footer", FooterSliceVariation>;
+/**
  * Primary content in HeroSlice → Primary
  *
  */
@@ -583,6 +632,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, AnimationSliceDefaultPrimary, AnimationSliceDefault, AnimationSliceVariation, AnimationSlice, HeroSliceSliceDefaultPrimary, HeroSliceSliceDefaultItem, HeroSliceSliceDefault, HeroSliceSliceVariation, HeroSliceSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, OtherPagesSliceDefaultPrimary, OtherPagesSliceDefault, OtherPagesSliceVariation, OtherPagesSlice, ProjectsSliceDefaultItem, ProjectsSliceDefault, ProjectsSliceVariation, ProjectsSlice, ResourcesSliceDefaultPrimary, ResourcesSliceDefaultItem, ResourcesSliceDefault, ResourcesSliceVariation, ResourcesSlice, WhatIOfferSliceDefaultPrimary, WhatIOfferSliceDefaultItem, WhatIOfferSliceDefault, WhatIOfferSliceVariation, WhatIOfferSlice };
+        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, AnimationSliceDefaultPrimary, AnimationSliceDefault, AnimationSliceVariation, AnimationSlice, FooterSliceDefaultPrimary, FooterSliceDefault, FooterSliceVariation, FooterSlice, HeroSliceSliceDefaultPrimary, HeroSliceSliceDefaultItem, HeroSliceSliceDefault, HeroSliceSliceVariation, HeroSliceSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, OtherPagesSliceDefaultPrimary, OtherPagesSliceDefault, OtherPagesSliceVariation, OtherPagesSlice, ProjectsSliceDefaultItem, ProjectsSliceDefault, ProjectsSliceVariation, ProjectsSlice, ResourcesSliceDefaultPrimary, ResourcesSliceDefaultItem, ResourcesSliceDefault, ResourcesSliceVariation, ResourcesSlice, WhatIOfferSliceDefaultPrimary, WhatIOfferSliceDefaultItem, WhatIOfferSliceDefault, WhatIOfferSliceVariation, WhatIOfferSlice };
     }
 }

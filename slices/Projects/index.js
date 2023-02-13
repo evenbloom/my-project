@@ -1,5 +1,7 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import { PrismicRichText } from '@prismicio/react'
+import Container from '@/components/Container'
 
 /**
  * @typedef {import("@prismicio/client").Content.ProjectsSlice} ProjectsSlice
@@ -7,43 +9,44 @@ import { PrismicRichText } from '@prismicio/react'
  * @param { ProjectsProps }
  */
 const Projects = ({ slice }) => (
-  <section className='flex overflow-x-scroll motion-safe:overflow-x-hidden'>
-    
-      <div className='relative'>
-          <div className='flex items-center animate-marquee -translate-x-full gap-8'>
+  <section className='mt-[-40rem]'>
+    <div id='cont' className='mask-rise-radial-gradient'>
+    <div className='photobanner flex'>
             {
               slice?.items?.map((item, i) =>
-                <img src={item.image.url}
-                  alt={item.image.alt}
-                  className="flex-shrink-0 rounded-2xl"
-                  key={i}
+                  <img 
+                    src={item.image.url}
+                    alt={item.image.alt}
+                    className="rounded-2xl"
+                    key={i}
                   />
-              )
-        }
-        {
-        slice?.items?.map((item, i) =>
-          <img src={item.image.url}
-            alt={item.image.alt} 
-            className="flex-shrink-0 rounded-2xl"
-            key={i + slice?.items?.length}
-            />
-        )
+                )
       }
-          </div>
-          <style js>{`
-      .animate-marquee {
-        animation: marquee 20s linear infinite;
-        width: fit-content;
+      {
+              slice?.items?.map((item, i) =>
+                  <img 
+                    src={item.image.url}
+                    alt={item.image.alt}
+                    className="flex-shrink-0 rounded-2xl object-contain"
+                    key={i}
+                  />
+                )
       }
-      @keyframes marquee {
-        0% { transform: translateX(0%); }
-        100% { transform: translateX(-133%); }
-      }
-    `}</style>
-        
       </div>
-    
-     </section>
+      
+       
+    <style js="true">{`
+
+     @keyframes bannermove {
+       0% {
+      transform: translate(0, 0);}
+      100% {
+          transform: translate(-50%, 0);}
+        }
+`}</style>
+      
+    </div>
+    </section>
 )
 
 export default Projects
