@@ -34,9 +34,43 @@
             "constraint": {},
             "thumbnails": []
           }
+        },
+        "bg_cover": {
+          "type": "Image",
+          "config": {
+            "label": "Bg Cover",
+            "constraint": {},
+            "thumbnails": []
+          }
         }
       },
-      "items": {},
+      "items": {
+        "numbers": {
+          "type": "Text",
+          "config": {
+            "label": "Numbers",
+            "placeholder": ""
+          }
+        },
+        "titles": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Titles ",
+            "placeholder": "Title - things about me",
+            "allowTargetBlank": true,
+            "single": "heading3"
+          }
+        },
+        "description_about_me": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description About me",
+            "placeholder": "Description of things about me",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        }
+      },
       "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     }
   ]

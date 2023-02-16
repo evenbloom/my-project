@@ -1,18 +1,18 @@
 {
   "title": {
     "__TYPE__": "FieldContent",
-    "value": "behavior",
+    "value": "zulu",
     "type": "Text"
   },
   "uid": {
     "__TYPE__": "UIDContent",
-    "value": "attack"
+    "value": "mud"
   },
   "slices": {
     "__TYPE__": "SliceContentType",
     "value": [
       {
-        "key": "other_pages$24ac7f4c-9c45-41c4-b5b1-51e01962f708",
+        "key": "other_pages$4ec6b906-758d-4387-bc30-9ba76eeb771e",
         "name": "other_pages",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -24,7 +24,7 @@
                 {
                   "type": "heading1",
                   "content": {
-                    "text": "Dried"
+                    "text": "Cookies"
                   }
                 }
               ]
@@ -35,7 +35,7 @@
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Aliquip est consequat officia aute anim veniam cupidatat incididunt sunt dolor voluptate elit. Occaecat deserunt veniam dolor dolor do esse ut et commodo irure adipisicing proident fugiat."
+                    "text": "Dolore aliqua nostrud duis. Veniam reprehenderit eu qui commodo. Enim qui dolore consequat duis fugiat reprehenderit do proident ullamco nostrud proident aliquip irure."
                   }
                 }
               ]
@@ -44,13 +44,13 @@
               "__TYPE__": "ImageContent",
               "origin": {
                 "id": "main",
-                "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a",
-                "width": 4000,
-                "height": 4000
+                "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8",
+                "width": 3456,
+                "height": 3456
               },
-              "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a",
-              "width": 4000,
-              "height": 4000,
+              "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8",
+              "width": 3456,
+              "height": 3456,
               "edit": {
                 "zoom": 1,
                 "crop": {
@@ -66,6 +66,102 @@
             {
               "__TYPE__": "GroupItemContent",
               "value": []
+            }
+          ]
+        }
+      },
+      {
+        "key": "fields$5ff23ba9-a0f8-4449-8f5e-1f3fe0418d13",
+        "name": "fields",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title_page": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading2",
+                  "content": {
+                    "text": "Education"
+                  }
+                }
+              ]
+            },
+            "description": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Sit ad irure eiusmod proident proident velit. Magna adipisicing nulla deserunt labore minim culpa in consectetur proident eiusmod dolor aliquip. Lorem ipsum magna veniam ipsum sint ad dolor voluptate aliquip laboris incididunt est amet."
+                  }
+                }
+              ]
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      },
+      {
+        "key": "footer$7a4f0bc6-4478-461b-8207-5fabca979376",
+        "name": "footer",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title_cta": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Mollit sit ut elit dolore dolore irure occaecat tempor eu mollit. Qui cillum eu est. Laboris labore labore amet velit culpa officia commodo incididunt dolor culpa occaecat elit laboris incididunt."
+                  }
+                }
+              ]
+            },
+            "cta_text": {
+              "__TYPE__": "FieldContent",
+              "value": "tube",
+              "type": "Text"
+            },
+            "cta_link": {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://twitter.com"
+              }
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "socials_text",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "value",
+                    "type": "Text"
+                  }
+                ],
+                [
+                  "social_links",
+                  {
+                    "__TYPE__": "LinkContent",
+                    "value": {
+                      "__TYPE__": "ExternalLink",
+                      "url": "https://slicemachine.dev"
+                    }
+                  }
+                ]
+              ]
             }
           ]
         }

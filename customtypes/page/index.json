@@ -26,6 +26,12 @@
           "choices": {
             "other_pages": {
               "type": "SharedSlice"
+            },
+            "fields": {
+              "type": "SharedSlice"
+            },
+            "footer": {
+              "type": "SharedSlice"
             }
           }
         }

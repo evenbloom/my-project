@@ -20,6 +20,18 @@
           "__TYPE__": "ExternalLink",
           "url": "http://google.com"
         }
+      },
+      "Contact_Button": {
+        "__TYPE__": "FieldContent",
+        "value": "hall",
+        "type": "Text"
+      },
+      "contact_link": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "http://google.com"
+        }
       }
     },
     "items": [

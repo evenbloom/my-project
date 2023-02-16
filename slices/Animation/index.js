@@ -51,7 +51,7 @@ const Animation = ({ slice }) => {
   }, [inView]);
 
   return (
-    <section className='section h-[100vh'>
+    <section className='section'>
       <div className={classNames("mask-rise-radial-gradient my-[-12.8rem] h-[60rem] overflow-hidden relative", "before:absolute before:opacity-[0.4] before:bg-rise-radial-gradient before:inset-0 after:absolute after:bg-darkteal after:rounded-[50%] after:top-1/2 after:-left-1/2 after:w-[200%] after:h-[142.8%] after:border-t after:border-[rgba(26,90,89,100%)]")}>
       </div>
       <div ref={ref} className=' pb-[20rem]'>

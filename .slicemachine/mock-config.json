@@ -16,7 +16,11 @@
         "items": {}
       }
     },
-    "OtherPages": {},
+    "OtherPages": {
+      "default": {
+        "items": {}
+      }
+    },
     "Animation": {
       "default": {
         "primary": {}
@@ -36,9 +40,19 @@
     },
     "NavigationItem": {
       "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "Footer": {
+      "default": {
         "primary": {}
       }
     },
-    "Footer": {}
+    "Fields": {
+      "default": {
+        "primary": {}
+      }
+    }
   }
 }

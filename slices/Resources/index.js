@@ -12,7 +12,7 @@ import Link from 'next/link'
  * @param { ResourcesProps }
  */
 const Resources = ({ slice }) => (
-  <section className='py-[20rem]'>
+  <section className='pt-[20rem]'>
     <Container>
       <div className='text-center justify-center'>
         <RichText field={slice.primary.title_section} className="text-6xl font-bold uppercase text-lightteal mb-4 " />

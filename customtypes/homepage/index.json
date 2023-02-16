@@ -31,6 +31,9 @@
             },
             "resources": {
               "type": "SharedSlice"
+            },
+            "footer": {
+              "type": "SharedSlice"
             }
           }
         }

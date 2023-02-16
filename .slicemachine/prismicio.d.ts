@@ -35,7 +35,7 @@ interface HomepageDocumentData {
  * Slice for *Homepage → Slice Zone*
  *
  */
-type HomepageDocumentDataSlicesSlice = HeroSliceSlice | ProjectsSlice | AnimationSlice | WhatIOfferSlice | ResourcesSlice;
+type HomepageDocumentDataSlicesSlice = HeroSliceSlice | ProjectsSlice | AnimationSlice | WhatIOfferSlice | ResourcesSlice | FooterSlice;
 /**
  * Homepage document from Prismic
  *
@@ -115,7 +115,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = OtherPagesSlice;
+type PageDocumentDataSlicesSlice = OtherPagesSlice | FieldsSlice | FooterSlice;
 /**
  * Page document from Prismic
  *
@@ -177,30 +177,115 @@ type AnimationSliceVariation = AnimationSliceDefault;
  */
 export type AnimationSlice = prismicT.SharedSlice<"animation", AnimationSliceVariation>;
 /**
+ * Primary content in Fields → Primary
+ *
+ */
+interface FieldsSliceDefaultPrimary {
+    /**
+     * Title Page field in *Fields → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: *None*
+     * - **API ID Path**: fields.primary.title_page
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title_page: prismicT.TitleField;
+    /**
+     * Description field in *Fields → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: fields.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+}
+/**
+ * Default variation for Fields Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Fields`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type FieldsSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<FieldsSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *Fields*
+ *
+ */
+type FieldsSliceVariation = FieldsSliceDefault;
+/**
+ * Fields Shared Slice
+ *
+ * - **API ID**: `fields`
+ * - **Description**: `Fields`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type FieldsSlice = prismicT.SharedSlice<"fields", FieldsSliceVariation>;
+/**
  * Primary content in Footer → Primary
  *
  */
 interface FooterSliceDefaultPrimary {
     /**
-     * Title field in *Footer → Primary*
-     *
-     * - **Field Type**: Title
-     * - **Placeholder**: This is where it all begins...
-     * - **API ID Path**: footer.primary.title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    title: prismicT.TitleField;
-    /**
-     * Description field in *Footer → Primary*
+     * Title CTA  field in *Footer → Primary*
      *
      * - **Field Type**: Rich Text
-     * - **Placeholder**: A nice description of your feature
-     * - **API ID Path**: footer.primary.description
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.primary.title_cta
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    description: prismicT.RichTextField;
+    title_cta: prismicT.RichTextField;
+    /**
+     * CTA Text field in *Footer → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.primary.cta_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    cta_text: prismicT.KeyTextField;
+    /**
+     * CTA Link field in *Footer → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.primary.cta_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    cta_link: prismicT.LinkField;
+}
+/**
+ * Item in Footer → Items
+ *
+ */
+export interface FooterSliceDefaultItem {
+    /**
+     * Socials Text field in *Footer → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.items[].socials_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    socials_text: prismicT.KeyTextField;
+    /**
+     * Social Links field in *Footer → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.items[].social_links
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    social_links: prismicT.LinkField;
 }
 /**
  * Default variation for Footer Slice
@@ -210,7 +295,7 @@ interface FooterSliceDefaultPrimary {
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type FooterSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<FooterSliceDefaultPrimary>, never>;
+export type FooterSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<FooterSliceDefaultPrimary>, Simplify<FooterSliceDefaultItem>>;
 /**
  * Slice variation for *Footer*
  *
@@ -335,6 +420,26 @@ interface NavigationItemSliceDefaultPrimary {
      *
      */
     link: prismicT.LinkField;
+    /**
+     * Contact  Btn field in *NavigationItem → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: Contact button
+     * - **API ID Path**: navigation_item.primary.Contact_Button
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    Contact_Button: prismicT.KeyTextField;
+    /**
+     * Contact Link field in *NavigationItem → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: Contact link
+     * - **API ID Path**: navigation_item.primary.contact_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    contact_link: prismicT.LinkField;
 }
 /**
  * Default variation for NavigationItem Slice
@@ -394,6 +499,52 @@ interface OtherPagesSliceDefaultPrimary {
      *
      */
     profile_picture: prismicT.ImageField<never>;
+    /**
+     * Bg Cover field in *OtherPages → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: other_pages.primary.bg_cover
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    bg_cover: prismicT.ImageField<never>;
+}
+/**
+ * Item in OtherPages → Items
+ *
+ */
+export interface OtherPagesSliceDefaultItem {
+    /**
+     * Numbers field in *OtherPages → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: other_pages.items[].numbers
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    numbers: prismicT.KeyTextField;
+    /**
+     * Titles  field in *OtherPages → Items*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: Title - things about me
+     * - **API ID Path**: other_pages.items[].titles
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    titles: prismicT.TitleField;
+    /**
+     * Description About me field in *OtherPages → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: Description of things about me
+     * - **API ID Path**: other_pages.items[].description_about_me
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description_about_me: prismicT.RichTextField;
 }
 /**
  * Default variation for OtherPages Slice
@@ -403,7 +554,7 @@ interface OtherPagesSliceDefaultPrimary {
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type OtherPagesSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<OtherPagesSliceDefaultPrimary>, never>;
+export type OtherPagesSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<OtherPagesSliceDefaultPrimary>, Simplify<OtherPagesSliceDefaultItem>>;
 /**
  * Slice variation for *OtherPages*
  *
@@ -632,6 +783,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, AnimationSliceDefaultPrimary, AnimationSliceDefault, AnimationSliceVariation, AnimationSlice, FooterSliceDefaultPrimary, FooterSliceDefault, FooterSliceVariation, FooterSlice, HeroSliceSliceDefaultPrimary, HeroSliceSliceDefaultItem, HeroSliceSliceDefault, HeroSliceSliceVariation, HeroSliceSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, OtherPagesSliceDefaultPrimary, OtherPagesSliceDefault, OtherPagesSliceVariation, OtherPagesSlice, ProjectsSliceDefaultItem, ProjectsSliceDefault, ProjectsSliceVariation, ProjectsSlice, ResourcesSliceDefaultPrimary, ResourcesSliceDefaultItem, ResourcesSliceDefault, ResourcesSliceVariation, ResourcesSlice, WhatIOfferSliceDefaultPrimary, WhatIOfferSliceDefaultItem, WhatIOfferSliceDefault, WhatIOfferSliceVariation, WhatIOfferSlice };
+        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, AnimationSliceDefaultPrimary, AnimationSliceDefault, AnimationSliceVariation, AnimationSlice, FieldsSliceDefaultPrimary, FieldsSliceDefault, FieldsSliceVariation, FieldsSlice, FooterSliceDefaultPrimary, FooterSliceDefaultItem, FooterSliceDefault, FooterSliceVariation, FooterSlice, HeroSliceSliceDefaultPrimary, HeroSliceSliceDefaultItem, HeroSliceSliceDefault, HeroSliceSliceVariation, HeroSliceSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, OtherPagesSliceDefaultPrimary, OtherPagesSliceDefaultItem, OtherPagesSliceDefault, OtherPagesSliceVariation, OtherPagesSlice, ProjectsSliceDefaultItem, ProjectsSliceDefault, ProjectsSliceVariation, ProjectsSlice, ResourcesSliceDefaultPrimary, ResourcesSliceDefaultItem, ResourcesSliceDefault, ResourcesSliceVariation, ResourcesSlice, WhatIOfferSliceDefaultPrimary, WhatIOfferSliceDefaultItem, WhatIOfferSliceDefault, WhatIOfferSliceVariation, WhatIOfferSlice };
     }
 }

@@ -28,6 +28,22 @@
             "allowTargetBlank": false,
             "select": null
           }
+        },
+        "Contact_Button": {
+          "type": "Text",
+          "config": {
+            "label": "Contact  Btn",
+            "placeholder": "Contact button"
+          }
+        },
+        "contact_link": {
+          "type": "Link",
+          "config": {
+            "label": "Contact Link",
+            "placeholder": "Contact link",
+            "allowTargetBlank": false,
+            "select": null
+          }
         }
       },
       "items": {},
