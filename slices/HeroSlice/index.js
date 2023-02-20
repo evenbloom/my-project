@@ -37,7 +37,7 @@ const HeroSlice = ({ slice }) => (
                   <PrismicLink
                     field={item.cta}
                     key={i}
-                    className='mt-8  inline-flex rounded-lg bg-teal text-lg text-background px-5 py-2 animate-fade-in [--animation-delay:600ms] opacity-0 translate-y-[-1rem]'
+                    className='mt-8  inline-flex rounded-lg bg-teal text-lg text-background px-5 py-2 animate-fade-in [--animation-delay:600ms] opacity-0 translate-y-[-1rem] hover:bg-mediumteal transition duration-150 ease-in-out'
                   >
                     <span >{ item.cta_text }</span>
                   </PrismicLink>

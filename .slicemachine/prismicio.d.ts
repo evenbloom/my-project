@@ -440,6 +440,26 @@ interface NavigationItemSliceDefaultPrimary {
      *
      */
     contact_link: prismicT.LinkField;
+    /**
+     * Logo field in *NavigationItem → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation_item.primary.logo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    logo: prismicT.ImageField<never>;
+    /**
+     * Logo Link field in *NavigationItem → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation_item.primary.logo_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    logo_link: prismicT.LinkField;
 }
 /**
  * Default variation for NavigationItem Slice

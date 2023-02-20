@@ -79,18 +79,16 @@ export function Navigation({ navigation }) {
       
             return (
               <Container className="flex h-navigation-height justify-between">
-                <Link href="/" className='flex items-center text-md'>  
-                  <img
-                    src='/logo.svg'
-                    className='w-14 mr-4'
-                  />
-                </Link> 
+                <PrismicLink  field={slice.primary.logo_link} className='flex items-center text-md'>  
+                  <img src={slice.primary.logo.url} alt={slice.primary.logo.alt} className="w-14" />
+
+                </PrismicLink> 
 
 
 
                 <nav
                   className={classNames(
-                  'h-[100vh] transition-opacity duration-500 fixed -z-10 md:-z-0 top-0 left-0 w-full pr-6 text-background bg-teal overflow-auto md:overflow-hidden md:block md:relative md:top-0 md:h-auto md:w-auto md:translate-x-0  md:bg-transparent md:opacity-100 md:transition-none md:text-lightteal',
+                  'h-[100vh] transition-opacity duration-500 fixed -z-10 md:-z-0 top-0 left-0 w-full pr-6 text-background bg-teal overflow-auto md:overflow-hidden md:block md:relative md:top-0 md:h-auto md:w-auto md:translate-x-0 md:bg-transparent md:opacity-100 md:transition-none md:text-lightteal',
                   hamburgerMenuIsOpen
                 ? "translate-x-0 opacity-100"
                 : "translate-x-[-100vw] opacity-0"

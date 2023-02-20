@@ -44,6 +44,22 @@
             "allowTargetBlank": false,
             "select": null
           }
+        },
+        "logo": {
+          "type": "Image",
+          "config": {
+            "label": "Logo",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "logo_link": {
+          "type": "Link",
+          "config": {
+            "label": "Logo Link",
+            "placeholder": "",
+            "select": null
+          }
         }
       },
       "items": {},

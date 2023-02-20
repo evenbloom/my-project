@@ -32,6 +32,36 @@
           "__TYPE__": "ExternalLink",
           "url": "http://google.com"
         }
+      },
+      "logo": {
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43",
+          "width": 4024,
+          "height": 4024
+        },
+        "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43",
+        "width": 4024,
+        "height": 4024,
+        "edit": {
+          "zoom": 1,
+          "crop": {
+            "x": 0,
+            "y": 0
+          },
+          "background": "transparent"
+        },
+        "credits": null,
+        "alt": null,
+        "__TYPE__": "ImageContent",
+        "thumbnails": {}
+      },
+      "logo_link": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "http://google.com"
+        }
       }
     },
     "items": [
