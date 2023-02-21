@@ -114,7 +114,7 @@ export function Navigation({ navigation }) {
                   </ul>
                 </nav>
 
-                <button   className='ml-6 md:hidden'
+                <button   className='ml-6 md:hidden stroke-lightteal'
                   onClick={() => setHamburgerMenuIsOpen((open) => !open)}
                 >
                   <span  className='sr-only'>Toggle menu</span>

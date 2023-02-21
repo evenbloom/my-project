@@ -9,6 +9,7 @@ import { repositoryName } from '../prismicio'
 export default function App({ Component, pageProps }) {
   return (
     <PrismicProvider internalLinkComponent={(props) => <Link {...props} />}>
+
       <PrismicPreview repositoryName={repositoryName}>
         <Component {...pageProps} />
       </PrismicPreview>

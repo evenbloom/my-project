@@ -57,7 +57,7 @@ const WhatIOffer = ({ slice }) => {
   }, [inView, animation, subheaderAnimation]);
 
   return (
-    <section className='w-full py-[20rem]'>
+    <section className='w-full py-[10rem]'>
       <Container>
         <div ref={ref}>
         <motion.div animate={animation} className='text-center justify-center'>
@@ -81,7 +81,7 @@ const WhatIOffer = ({ slice }) => {
               <span className='text-lightteal'>{item.numbers}</span>
               <RichText field={item.title_points} className="text-lg  text-lightteal max-w-xs" />
                 
-              <RichText field={item.key_description} className="text-sm max-w-[27rem] mt-3" />
+              <RichText field={item.key_description} className=" text-mediumteal text-sm max-w-[27rem] mt-3" />
                 
             </div>
           ))}

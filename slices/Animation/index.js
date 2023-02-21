@@ -54,7 +54,7 @@ const Animation = ({ slice }) => {
     <section className='section'>
       <div className={classNames("mask-rise-radial-gradient my-[-12.8rem] h-[60rem] overflow-hidden relative", "before:absolute before:opacity-[0.4] before:bg-rise-radial-gradient before:inset-0 after:absolute after:bg-darkteal after:rounded-[50%] after:top-1/2 after:-left-1/2 after:w-[200%] after:h-[142.8%] after:border-t after:border-[rgba(26,90,89,100%)]")}>
       </div>
-      <div ref={ref} className=' pb-[20rem]'>
+      <div ref={ref} className=' pb-[10rem]'>
         <Container>
           <motion.div
             animate={animation}
@@ -71,7 +71,7 @@ const Animation = ({ slice }) => {
           </div>
           <div className='grid md:grid-cols-2 grid-cols-1 gap-10 mt-10'>
             <div className='relative z-2 flex overflow-hidden h-100% flex-col py-[58px] px-[64px] bg-lightteal rounded-2xl'>
-              <h3 className='text-4xl font-medium'>
+              <h3 className='text-4xl font-semibold leading-tight font-sans'>
                 Clean efficient Code.
               </h3>
               <div className='flex mt-[48px] mr-[-64px] mb-[-58px] pt-2 items-center bg-Teal-gradient rounded-tl-2xl flex-1'>
@@ -82,7 +82,7 @@ const Animation = ({ slice }) => {
               </div>
             </div >
             <div className='relative z-2 flex flex-col overflow-hidden h-100% pt-[58px] px-[auto] bg-lightteal rounded-2xl '>
-              <h3 className='text-4xl font-medium mx-[58px]'>
+              <h3 className='text-4xl font-semibold mx-[58px] leading-tight font-sans'>
                 Responsive Development
               </h3>
               <div className="flex mt-[0] mx-auto mb-[0] flex-col justify-center items-end relative pt-5">

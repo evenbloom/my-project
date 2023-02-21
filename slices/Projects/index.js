@@ -9,7 +9,7 @@ import Container from '@/components/Container'
  * @param { ProjectsProps }
  */
 const Projects = ({ slice }) => (
-  <section className='mt-[-40rem]'>
+  <section className='mt-[-20rem]'>
     <div id='cont' className='mask-rise-radial-gradient'>
     <div className='photobanner flex'>
             {
