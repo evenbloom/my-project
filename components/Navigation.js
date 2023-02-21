@@ -28,14 +28,8 @@ export function Navigation({ navigation }) {
       window.removeEventListener("resize", closeHamburgerNavigation);
     };
   }, [setHamburgerMenuIsOpen]);
-  
-  return (
-    <header className='fixed z-10 left-0 right-0 md:top-2 top-0 backdrop-blur-[15px] bg-darkteal md:rounded-[10rem] rounded-0 bg-opacity-20 md:w-[1200px] md:mx-auto md:inline-block'>
-  
-      
-          {/* Renders top-level links. */}
-    {navigation.data.slices.map((slice) => {
-      const { ref, inView } = useInView({
+
+   const { ref, inView } = useInView({
     threshold: 0.1
   });
   const animation = useAnimation();
@@ -76,6 +70,13 @@ export function Navigation({ navigation }) {
       });
     }
   }, [inView]);
+  
+  return (
+    <header className='fixed z-10 left-0 right-0 md:top-2 top-0 backdrop-blur-[15px] bg-darkteal md:rounded-[10rem] rounded-0 bg-opacity-20 md:w-[1200px] md:mx-auto md:inline-block'>
+  
+      
+          {/* Renders top-level links. */}
+    {navigation.data.slices.map((slice) => {
       
             return (
               <Container className="flex h-navigation-height justify-between">
@@ -97,7 +98,7 @@ export function Navigation({ navigation }) {
                   <ul ref={ref} className='flex flex-col md:flex-row md:items-center text-md h-full [&_li]:ml-6 md:text-md text-8xl [&_li]:h-[25vh] [&_li]:pt-[20rem] md:[&_li]:pt-[0rem] [&_li]:flex [&_li]:items-center [&_li]:font-sans md:[&_li]:font-sans md:[&_li]:text-md [&_a]:md:transition-colors",
                 hamburgerMenuIsOpen && "[&_a]:translate-y-0' > 
                     
-                    <motion.li animate={animation}>
+                    <motion.li key={slice.id} animate={animation}>
                       <PrismicLink field={slice.primary.link} className='group text-lightteal transition duration-300'>
                         <RichText field={slice.primary.name} />
                         <span className='block max-w-0 group-hover:max-w-full transition-all duration-500 h-[2px] bg-lightteal group-hover:mt-4 md:group-hover:mt-2 md:duration-300'></span>
