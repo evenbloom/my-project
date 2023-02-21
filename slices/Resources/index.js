@@ -49,7 +49,7 @@ const Resources = ({ slice }) => {
         opacity: 0
       });
     }
-  }, [inView]);
+  }, [inView, animation, subheaderAnimation]);
 
   return(
 

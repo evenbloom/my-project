@@ -3,60 +3,14 @@ import { PrismicRichText } from '@prismicio/react'
 import Container from '@/components/Container'
 import RichText from '@/components/RichText'
 import classNames from 'classnames'
-import { motion, useAnimation, AnimatePresence } from 'framer-motion';
-import { useInView } from 'react-intersection-observer'
-import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from 'framer-motion';
 
 /**
  * @typedef {import("@prismicio/client").Content.OtherPagesSlice} OtherPagesSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<OtherPagesSlice>} OtherPagesProps
  * @param { OtherPagesProps }
  */
-const OtherPages = ({ slice }) => {
-
-  const { ref, inView } = useInView({
-    threshold: 0.1
-  });
-  const animation = useAnimation();
-  const subheaderAnimation = useAnimation();
-
-  useEffect(() => {
-    console.log("use effect hook, inView = ", inView);
-    if (inView) {
-      animation.start({
-        y: 0,
-        opacity: 1,
-        transition: {
-          ease: [0.2, 0.8, 0.4, 1], duration: 0.8, delay: 0.28
-        }
-      });
-      subheaderAnimation.start({
-        y: 0,
-        opacity: 1,
-        transition: {
-          ease: [0.2, 0.8, 0.4, 1], duration: 0.8, delay: 0.38
-        }
-      });
-    }
-    if (!inView) {
-      animation.start({
-        y: 100,
-        opacity: 0,
-        transition: {
-          ease: [0.2, 0.8, 0.4, 1], duration: 0.8, delay: 0.38
-        }
-      });
-      subheaderAnimation.start({
-        y: 100,
-        opacity: 0,
-        transition: {
-          ease: [0.2, 0.8, 0.4, 1], duration: 0.8, delay: 0.38
-        }
-      });
-    }
-  }, [inView]);
-
-  return(
+const OtherPages = ({ slice }) => (
   <section className='h-[100vh] mb-[80rem]'>
     <div className='relative w-full'>
       <div className='fixed w-full '>
@@ -188,6 +142,6 @@ const OtherPages = ({ slice }) => {
       
       </div>
   </section>
-)}
+)
 
 export default OtherPages

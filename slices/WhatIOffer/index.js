@@ -54,7 +54,7 @@ const WhatIOffer = ({ slice }) => {
         }
       });
     }
-  }, [inView]);
+  }, [inView, animation, subheaderAnimation]);
 
   return (
     <section className='w-full py-[20rem]'>

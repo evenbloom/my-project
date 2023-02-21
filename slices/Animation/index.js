@@ -48,7 +48,7 @@ const Animation = ({ slice }) => {
         opacity: 0
       });
     }
-  }, [inView]);
+  }, [inView, animation, subheaderAnimation]);
 
   return (
     <section className='section'>
