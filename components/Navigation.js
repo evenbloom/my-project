@@ -1,8 +1,7 @@
-import { PrismicLink, PrismicRichText } from '@prismicio/react'
-import Container from './Container'
+import { PrismicLink} from '@prismicio/react'
+import Container from './Container';
 import { useEffect, useState } from "react";
-import { HamburgerIcon } from './icons/Hamburger'
-import Link from 'next/link'
+import { HamburgerIcon } from "./Icons/Hamburger";
 import classNames from 'classnames';
 import RichText from './RichText';
 import { motion, useAnimation } from 'framer-motion';
