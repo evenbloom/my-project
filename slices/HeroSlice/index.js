@@ -2,7 +2,6 @@ import React from 'react'
 import { PrismicRichText, PrismicLink } from '@prismicio/react'
 import { PrismicNextImage } from '@prismicio/next'
 import RichText from '@/components/RichText'
-import CustomLink from '@/components/CustomLink'
 import Container from '@/components/Container'
 
 /**
@@ -14,8 +13,7 @@ const HeroSlice = ({ slice }) => (
  <section className='Hero h-[100vh] bg-hero-gradient'>
     <div className='relative'>
       <div className='absolute w-full'>
-        <PrismicNextImage field={slice.primary.image} className=" bg-cover bg-no-repeat w-full over"
-          style="background-position: 50%; height:1033px;"
+        <img src={slice.primary.image.url} alt={slice.primary.image.alt} className=" bg-cover bg-no-repeat w-full over"
         />
       </div>
     </div>

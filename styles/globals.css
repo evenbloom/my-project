@@ -32,6 +32,13 @@
   .photobanner img{
     max-width: 640px;
     margin: 0 0.5em;
+    display: block;
+  }
+
+  .heroimage{
+    background-position: 50%;
+    height: 1033px;
+
   }
   
 }

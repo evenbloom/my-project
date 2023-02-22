@@ -16,7 +16,6 @@ content: [
       animation: ['motion-safe', 'motion-reduce'],
     },
     fontFamily: {
-      map: "map-roman-normal, serif",
       sans: '"SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu, Cantarell,"Open Sans","Helvetica Neue",sans-serif',
       },
     fontSize: {

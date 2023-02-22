@@ -28,6 +28,7 @@ export async function getStaticProps({ previewData }) {
   const page = await client.getSingle('homepage')
   const navigation = await client.getSingle('navigation')
 
+  
   return {
     props: {
       navigation,

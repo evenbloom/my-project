@@ -11,7 +11,7 @@ import { motion, AnimatePresence } from 'framer-motion';
  * @param { OtherPagesProps }
  */
 const OtherPages = ({ slice }) => (
-  <section className='h-[100vh] md:mb-[100rem] mb-[160rem]'>
+  <section className='h-[100vh] md:mb-[100rem] mb-[120rem]'>
     <div className='relative w-full'>
       <div className='fixed w-full '>
         <img src={slice.primary.bg_cover.url} alt={slice.primary.bg_cover.alt} className=" bg-cover bg-no-repeat w-full over mask-linear-gradient backdrop-blur-[15px]"

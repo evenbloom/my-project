@@ -6,6 +6,8 @@ import classNames from 'classnames';
 import RichText from './RichText';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer'
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 
 export function Navigation({ navigation }) {
@@ -69,6 +71,12 @@ export function Navigation({ navigation }) {
       });
     }
   }, [inView, animation, subheaderAnimation]);
+
+  const router = useRouter();
+
+  function handleGoHome() {
+    router.push('/');
+  }
   
   return (
     <header className='fixed z-10 left-0 right-0 md:top-2 top-0 backdrop-blur-[15px] bg-darkteal md:rounded-[10rem] rounded-0 bg-opacity-20 md:w-[1200px] md:mx-auto md:inline-block'>
@@ -80,10 +88,10 @@ export function Navigation({ navigation }) {
       return (
               <div key={slice.id}>
               <Container className="flex h-navigation-height justify-between">
-                <PrismicLink  field={slice.primary.logo_link} className='flex items-center text-md'>  
-                  <img src={slice.primary.logo.url} alt={slice.primary.logo.alt} className="w-14" />
+                <Link href="/" className='flex items-center text-md'>  
+                  <img src={slice.primary.logo.url} alt={slice.primary.logo.alt} className="w-14" onClick={handleGoHome} />
 
-                </PrismicLink> 
+                </Link> 
 
 
 
