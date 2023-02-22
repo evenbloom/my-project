@@ -16,7 +16,7 @@ content: [
       animation: ['motion-safe', 'motion-reduce'],
     },
     fontFamily: {
-      sans: '"SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu, Cantarell,"Open Sans","Helvetica Neue",sans-serif',
+      sans:'"SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu, Cantarell,"Open Sans","Helvetica Neue",sans-serif',
       },
     fontSize: {
       xs: "1.3rem",

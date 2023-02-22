@@ -88,7 +88,7 @@ const Animation = ({ slice }) => {
               <div className="flex mt-[0] mx-auto mb-[0] flex-col justify-center items-end relative pt-5">
                 <img
                   src='/responsive.svg'
-                  className="w-100% md:h-[257px] h-[250px] object-contain object-bottom inline-block"
+                  className="w-100% md:h-[257px] h-[180px] object-contain object-bottom inline-block"
                 />
               </div>
             </div>

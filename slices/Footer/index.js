@@ -2,6 +2,7 @@ import React from 'react'
 import { PrismicRichText, PrismicLink } from '@prismicio/react'
 import Container from '@/components/Container'
 import RichText from '@/components/RichText'
+import classNames from 'classnames'
 
 /**
  * @typedef {import("@prismicio/client").Content.FooterSlice} FooterSlice
@@ -13,6 +14,8 @@ const Footer = ({ slice }) => {
 
     return (
       <footer className='relative'>
+        <div className={classNames("mask-rise-radial-gradient my-[-12.8rem] h-[60rem] -z-50 overflow-hidden relative", "before:absolute before:opacity-[0.4] rotate-180 before:bg-rise-radial-gradient before:inset-0 after:absolute after:bg-darkteal after:rounded-[50%] after:top-1/2 after:-left-1/2 after:w-[200%] after:h-[142.8%] after:border-t after:border-[rgba(26,90,89,100%)]")}>
+        </div>
         <Container>
           <div className='justify-center text-center px-4 pb-[12rem]'>
             <RichText field={slice.primary.title_cta} className='text-6xl font-bold uppercase text-lightteal mb-4' />

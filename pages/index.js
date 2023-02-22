@@ -5,6 +5,7 @@ import { createClient } from '../prismicio'
 import { components } from '../slices'
 import { Navigation } from '../components/Navigation'
 
+
 const Page = ({ page, navigation, settings }) => {
   return (
     <div>
