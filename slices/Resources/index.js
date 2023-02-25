@@ -65,21 +65,36 @@ const Resources = ({ slice }) => {
           </motion.div>
       </div>
 
-      <div className='grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-10 mt-14 gap-x-10'>
+      <div className='grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-10 mt-14 gap-x-10 h-min relative w-[100%] flex-grow-0 flex-shrink-0 flex-auto'>
         {
           slice?.items?.map((item, i) => (
-            <div field={item.cta_link} key={i} className={classNames('relative h-[400px] flex overflow-hidden flex-col rounded-2xl bg-mediumteal transform transition duration-500 hover:translate-y-[-1rem] cursor-pointer')}>
-              <div field={item.cta_link} className='h-full'>
-                <img src={item.resource_images.url} alt={item.resource_images.alt} className='w-full h-full object-cover absolute' />
-                <div className='px-8 py-10 w-100% relative bg-overlay-gradient h-full flex flex-col justify-end'>
-                  <RichText field={item.resource_header} className='text-md text-lightteal align-text-bottom font-semibold' />
-                  <PrismicLink field={item.cta_link} className='mt-2 text-md text-lightteal flex items-baseline gap-2 transform duration-500 hover:gap-3'>
-                    Get it now
-                    <img src='/arrow-icon.svg'/>
-                  </PrismicLink>
-                </div>
-              </div>
+             <PrismicLink field={item.cta_link} key={i} className='relative flex overflow-hidden flex-col flex-nowrap rounded-2xl bg-mediumteal cursor-pointer'>
+  <div className='overflow-visible h-[400px] w-[100%]'>
+    <div className='absolute'>
+      <div className="group relative">
+        <img src={item.resource_images.url} alt={item.resource_images.alt} className='object-cover mask-linear-gradient transform transition duration-500 group-hover:scale-110' />
+        <div className="absolute inset-0 bg-teal rounded-2xl opacity-60 group-hover:opacity-30 transition-all duration-500 flex items-end place-content-end justify-start h-[400px] px-8 py-6">
+          <div className='items-center place-content-center flex flex-nowrap relative flex-row flex-auto flex-shrink-0 flex-grow-0'>
+            <div className='relative p-4'>
+              <div className='absolute -inset-1 bg-mediumteal rounded-full' />
+              <img src='/arrow-icon.svg' alt='Arrow icon' className='m-auto transform -rotate-45 group-hover:rotate-0 origin-center transition duration-300'/>
             </div>
+            <div className='w-min flex flex-row flex-nowrap items-center h-[60px] place-content-center relative hidden'>
+              <RichText field={item.cta_text} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div className='overflow-hidden flex items-end w-[100%] flex-shrink-0 flex-grow-0 flex-auto flex-col flex-nowrap place-content-end absolute px-8 py-6'>
+    <div>
+      <div className='flex flex-shrink-0 flex-grow-0 flex-auto flex-col flex-nowrap'>
+        <RichText field={item.resource_header} className='text-md text-lightteal font-semibold' />
+      </div>
+    </div>
+  </div>
+</PrismicLink>
           ))
         }
       </div>

@@ -689,6 +689,16 @@ export interface ResourcesSliceDefaultItem {
      *
      */
     cta_link: prismicT.LinkField;
+    /**
+     * CTA Text field in *Resources → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: resources.items[].cta_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    cta_text: prismicT.RichTextField;
 }
 /**
  * Default variation for Resources Slice

@@ -79,6 +79,20 @@
                 "url": "https://slicemachine.dev"
               }
             }
+          ],
+          [
+            "cta_text",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Aliqua occaecat esse nostrud."
+                  }
+                }
+              ]
+            }
           ]
         ]
       }
