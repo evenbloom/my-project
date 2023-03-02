@@ -9,11 +9,6 @@ import { Navigation } from '../components/Navigation'
 const Page = ({ page, navigation, settings }) => {
   return (
     <div>
-      <Head>
-        <title>Even Bloom</title>
-        <meta name='description' content='Home | Nouran Zedan - Web Designer and Frontend Developer' />
-        <link/>
-      </Head>
       <Navigation navigation={navigation} />
       {/* The rest of your component... */}
       <SliceZone slices={page.data.slices} components={components} />

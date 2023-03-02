@@ -24,14 +24,14 @@ const Footer = ({ slice }) => {
             </PrismicLink>
           </div>
           <div className='flex gap-10 py-[8rem] justify-between flex-col md:flex-row text-center md:text-left'>
-            <div className='text-md'>
-              <p>&copy; {year} <span>– Handcrafted using <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">React</a>, <a href="https://www.nextjs.org/" target="_blank" rel="noopener noreferrer"> Next.js</a> & <a href="https://www.prismic.io/" target="_blank" rel="noopener noreferrer">Prismic</a></span></p>
+            <div className='text-md text-mediumteal'>
+              <p>&copy; {year} <span>– Handcrafted using <a href="https://reactjs.org/" className='hover:text-lightteal' target="_blank" rel="noopener noreferrer">React</a>, <a href="https://www.nextjs.org/" className='hover:text-lightteal' target="_blank" rel="noopener noreferrer"> Next.js</a> & <a href="https://www.prismic.io/" className='hover:text-lightteal' target="_blank" rel="noopener noreferrer">Prismic</a></span></p>
             </div>
             <div className='flex gap-10  justify-center md:justify-end text-center md:text-left'>
               {
                 slice?.items?.map((item, i) =>
                   <div key={i}>
-                    <PrismicLink field={item.social_links} className='hover:text-mediumteal'>
+                    <PrismicLink field={item.social_links} className='hover:text-lightteal text-mediumteal'>
                       <span className='text-md'>{item.socials_text}</span>
                     </PrismicLink>
                   </div>

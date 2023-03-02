@@ -77,6 +77,7 @@ const Animation = ({ slice }) => {
               <div className='flex mt-[48px] mr-[-64px] mb-[-58px] pt-2 items-center bg-Teal-gradient rounded-tl-2xl flex-1'>
                 <img
                   src='/code.svg'
+                  alt='clean efficient code'
                   className="w-100% h-auto pl-6 py-2"
                 />
               </div>
@@ -87,7 +88,7 @@ const Animation = ({ slice }) => {
               </h3>
               <div className="flex mt-[0] mx-auto mb-[0] flex-col justify-center items-end relative pt-5">
                 <img
-                  src='/responsive.svg'
+                  src='/responsive.svg' alt='responsive design'
                   className="w-100% md:h-[257px] h-[180px] object-contain object-bottom inline-block"
                 />
               </div>
