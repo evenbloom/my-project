@@ -73,21 +73,21 @@ const Resources = ({ slice }) => {
     <div className='absolute'>
       <div className="group relative">
         <img src={item.resource_images.url} alt={item.resource_images.alt} className='object-cover mask-linear-gradient transform transition duration-500 group-hover:scale-110' />
-        <div className="absolute inset-0 bg-teal rounded-2xl opacity-60 group-hover:opacity-30 transition-all duration-500 flex items-end place-content-end justify-start h-[400px] px-8 py-6">
+        <div className="absolute inset-0 bg-teal rounded-2xl opacity-60 group-hover:opacity-80 transition-all duration-500 flex items-end place-content-end justify-start h-[400px] px-8 py-6">
           <div className='items-center place-content-center flex flex-nowrap relative flex-row flex-auto flex-shrink-0 flex-grow-0'>
             <div className='relative p-4'>
-              <div className='absolute -inset-1 bg-mediumteal rounded-full' />
+              <div className='absolute -inset-1 bg-mediumteal rounded-full w-13 transform transition duration-500 group-hover:w-[150px]' />
               <img src='/arrow-icon.svg' alt='Arrow icon' className='m-auto transform -rotate-45 group-hover:rotate-0 origin-center transition duration-300'/>
             </div>
-            <div className='w-min flex flex-row flex-nowrap items-center h-[60px] place-content-center relative hidden'>
-              <RichText field={item.cta_text} />
+            <div className='flex flex-row flex-nowrap items-center h-[60px] place-content-center relative text-lightteal'>
+              <RichText field={item.cta_text}  className='opacity-0 transform transition duration-200 group-hover:opacity-100 text-md align-baseline'/>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div className='overflow-hidden flex items-end w-[100%] flex-shrink-0 flex-grow-0 flex-auto flex-col flex-nowrap place-content-end absolute px-8 py-6'>
+  <div className='overflow-hidden flex items-end flex-shrink-0 flex-grow-0 flex-auto flex-col flex-nowrap place-content-end absolute px-8 py-6'>
     <div>
       <div className='flex flex-shrink-0 flex-grow-0 flex-auto flex-col flex-nowrap'>
         <RichText field={item.resource_header} className='text-md text-lightteal font-semibold' />

@@ -71,6 +71,7 @@ const WhatIOffer = ({ slice }) => {
         <div className='items-center'>
           <img
             src='/design.svg'
+            alt='what I offer design and development'
             className="mask-linear-gradient mt-14 overflow-hidden mx-auto"
           />
         </div>
