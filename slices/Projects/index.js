@@ -17,7 +17,7 @@ const Projects = ({ slice }) => (
                   <img 
                     src={item.image.url}
                     alt={item.image.alt}
-                    className="rounded-2xl"
+                    className="rounded-2xl w-[640px] h-[400px]"
                     key={i}
                   />
                 )
@@ -27,7 +27,7 @@ const Projects = ({ slice }) => (
                   <img 
                     src={item.image.url}
                     alt={item.image.alt}
-                    className="flex-shrink-0 rounded-2xl object-contain"
+                    className="flex-shrink-0 rounded-2xl w-[640px] h-[400px] object-contain"
                     key={i}
                   />
                 )
