@@ -23,7 +23,21 @@ const Footer = ({ slice }) => {
               <span >{slice.primary.cta_text}</span>
             </PrismicLink>
           </div>
-          <div className='flex gap-10 py-[8rem] justify-between flex-col md:flex-row text-center md:text-left'>
+          <div className='flex gap-10 py-[8rem] justify-between flex-col md:flex-row text-center md:text-left md:items-end'>
+            <div className='flex flex-col'>
+              <div className='text-lightteal text-md'>Subscribe</div>
+              <div className='text-sm text-mediumteal mb-5'>Subscribe to my newsletter to get regular updates on templates.</div>
+              <form action="https://evenbloom.lemonsqueezy.com/email-subscribe/external" method="post" className='flex'>
+                    <label for="email" className='hidden'>Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email address" required className='w-full border-teal px-3 py-2 bg-lightteal rounded-l-lg focus:outline-none focus:border-teal focus:ring-1 focus:ring-teal text-md' />
+                    <button
+                      type="submit"
+                      className='bg-teal text-md text-lightteal rounded-r-lg px-5 py-2 border-teal hover:bg-mediumteal transition duration-150 ease-in-out'>
+                      Subscribe
+                    </button>
+                </form>
+              </div>
+
             <div className='text-md text-mediumteal'>
               <p>&copy; {year} <span>– Handcrafted using <a href="https://reactjs.org/" className='hover:text-lightteal' target="_blank" rel="noopener noreferrer">React</a>, <a href="https://www.nextjs.org/" className='hover:text-lightteal' target="_blank" rel="noopener noreferrer"> Next.js</a> & <a href="https://www.prismic.io/" className='hover:text-lightteal' target="_blank" rel="noopener noreferrer">Prismic</a></span></p>
             </div>
