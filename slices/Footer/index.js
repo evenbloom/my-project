@@ -14,7 +14,7 @@ const Footer = ({ slice }) => {
 
     return (
       <footer className='relative'>
-        <div className={classNames("mask-rise-radial-gradient my-[-12.8rem] h-[60rem] -z-50 overflow-hidden relative", "before:absolute before:opacity-[0.4] rotate-180 before:bg-rise-radial-gradient before:inset-0 after:absolute after:bg-darkteal after:rounded-[50%] after:top-1/2 after:-left-1/2 after:w-[200%] after:h-[142.8%] after:border-t after:border-[rgba(26,90,89,100%)]")}>
+        <div className={classNames("mask-rise-radial-gradient h-[60rem] -z-50 overflow-hidden relative", "before:absolute before:opacity-[0.4] rotate-180 before:bg-rise-radial-gradient before:inset-0 after:absolute after:bg-darkteal after:rounded-[50%] after:top-1/2 after:-left-1/2 after:w-[200%] after:h-[142.8%] after:border-t after:border-[rgba(26,90,89,100%)]")}>
         </div>
         <Container>
           <div className='justify-center text-center px-4 pb-[12rem]'>

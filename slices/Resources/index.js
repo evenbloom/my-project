@@ -68,8 +68,8 @@ const Resources = ({ slice }) => {
       <div className='grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-10 mt-14 gap-x-10 h-min relative w-[100%] flex-grow-0 flex-shrink-0 flex-auto'>
         {
           slice?.items?.map((item, i) => (
-             <PrismicLink field={item.cta_link} key={i} className='relative flex overflow-hidden flex-col flex-nowrap rounded-2xl bg-mediumteal cursor-pointer'>
-  <div className='overflow-visible h-[401px] w-[100%]'>
+             <PrismicLink field={item.cta_link} key={i} className='relative flex overflow-hidden flex-col flex-nowrap rounded-2xl bg-mediumteal cursor-pointer h-[400px]'>
+  <div className='overflow-visible h-[400px] w-[100%]'>
     <div className='absolute'>
       <div className="group relative">
         <img src={item.resource_images.url} alt={item.resource_images.alt} className='object-cover mask-linear-gradient transform transition duration-500 group-hover:scale-110' />
