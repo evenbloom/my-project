@@ -69,7 +69,7 @@ const Resources = ({ slice }) => {
         {
           slice?.items?.map((item, i) => (
              <PrismicLink field={item.cta_link} key={i} className='relative flex overflow-hidden flex-col flex-nowrap rounded-2xl bg-mediumteal cursor-pointer'>
-  <div className='overflow-visible h-[400px] w-[100%]'>
+  <div className='overflow-visible h-[401px] w-[100%]'>
     <div className='absolute'>
       <div className="group relative">
         <img src={item.resource_images.url} alt={item.resource_images.alt} className='object-cover mask-linear-gradient transform transition duration-500 group-hover:scale-110' />
